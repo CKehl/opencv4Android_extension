@@ -52,6 +52,7 @@ extern "C" {
     JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeDrawMatchesCustom(JNIEnv * env, jobject, jlong img1Ptr, jlong kpImg1Ptr, jlong img2Ptr, jlong kpImg2Ptr, jlong matchesPtr, jlong imgTargetPtr, jdoubleArray matchColorPtr, jdoubleArray otherColorPtr, jint ptRadius, jint ptThickness, jint lineSize);
     JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeMSERdetect(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr);
     JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeMSERdetectParameter(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr, jint delta, jint min_area, jint max_area, jdouble max_variation, jdouble min_diversity, jint max_evolution, jdouble area_threshold, jdouble min_margin, jint edge_blur_size);
+    JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeMSCRSIFT(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr, jlong descriptorMatPtr);
 };
 
 cv::Vec3b getClampedValue(const cv::Mat& img, long x, long y, long width, long height)
@@ -161,6 +162,20 @@ JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_n
 	detector = new MserFeatureDetector(delta, min_area, max_area, max_variation, min_diversity, max_evolution, area_threshold, min_margin, edge_blur_size);
 	detector->detect(image, keypoints);
 	//delete detector;
+	vector_KeyPoint_to_Mat(keypoints, keypointMat);
+}
+
+JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeMSCRSIFT(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr, jlong descriptorMatPtr) {
+	Mat& image = *(cv::Mat*)imagePtr;
+	Mat& keypointMat = *(cv::Mat*)keypointMatPtr;
+	Mat& descriptorMat = *(cv::Mat*)descriptorMatPtr;
+	vector<KeyPoint> keypoints;
+	Ptr<FeatureDetector> detector;
+	Ptr<DescriptorExtractor> extractor;
+	detector = new MserFeatureDetector();
+	detector->detect(image, keypoints);
+	extractor = new SiftDescriptorExtractor();
+	extractor->compute(image, keypoints, descriptorMat);
 	vector_KeyPoint_to_Mat(keypoints, keypointMat);
 }
 
