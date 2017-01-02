@@ -53,6 +53,14 @@ extern "C" {
     JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeMSERdetect(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr);
     JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeMSERdetectParameter(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr, jint delta, jint min_area, jint max_area, jdouble max_variation, jdouble min_diversity, jint max_evolution, jdouble area_threshold, jdouble min_margin, jint edge_blur_size);
     JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeMSCRSIFT(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr, jlong descriptorMatPtr);
+    
+    JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Filters_nativeWallisFilter(JNIEnv* env, jobject, jlong imgInMatPtr, jlong imgOutMatPtr, jint kernelSize);
+    JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Filters_nativeGammaAdaptation(JNIEnv* env, jobject, jlong imgInMatPtr, jlong imgOutMatPtr, jfloat gamma);
+    JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Filters_nativeWallisRGBFilter(JNIEnv* env, jobject, jlong imgInMatPtr, jlong imgOutMatPtr, jint kernelSize);
+    JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Features_nativeDrawMatchesCustom(JNIEnv * env, jobject, jlong img1Ptr, jlong kpImg1Ptr, jlong img2Ptr, jlong kpImg2Ptr, jlong matchesPtr, jlong imgTargetPtr, jdoubleArray matchColorPtr, jdoubleArray otherColorPtr, jint ptRadius, jint ptThickness, jint lineSize);
+    JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Features_nativeMSERdetect(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr);
+    JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Features_nativeMSERdetectParameter(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr, jint delta, jint min_area, jint max_area, jdouble max_variation, jdouble min_diversity, jint max_evolution, jdouble area_threshold, jdouble min_margin, jint edge_blur_size);
+    JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Features_nativeMSCRSIFT(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr, jlong descriptorMatPtr);
 };
 
 cv::Vec3b getClampedValue(const cv::Mat& img, long x, long y, long width, long height)
@@ -139,7 +147,22 @@ JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_n
 	return;
 }
 
+//JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Features_
+
 JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeMSERdetect(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr/*, jlong descriptorMatPtr*/) {
+	Mat& image = *(cv::Mat*)imagePtr;
+	Mat& keypointMat = *(cv::Mat*)keypointMatPtr;
+	//Mat& descriptorMat = *(cv::Mat*)descriptorMatPtr;
+	vector<KeyPoint> keypoints;
+	Ptr<FeatureDetector> detector;
+	//Ptr<DescriptorExtractor> extractor;
+	detector = new MserFeatureDetector();
+	detector->detect(image, keypoints);
+	//delete detector;
+	vector_KeyPoint_to_Mat(keypoints, keypointMat);
+}
+
+JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Features_nativeMSERdetect(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr/*, jlong descriptorMatPtr*/) {
 	Mat& image = *(cv::Mat*)imagePtr;
 	Mat& keypointMat = *(cv::Mat*)keypointMatPtr;
 	//Mat& descriptorMat = *(cv::Mat*)descriptorMatPtr;
@@ -165,6 +188,19 @@ JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_n
 	vector_KeyPoint_to_Mat(keypoints, keypointMat);
 }
 
+JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Features_nativeMSERdetectParameter(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr/*, jlong descriptorMatPtr*/, jint delta, jint min_area, jint max_area, jdouble max_variation, jdouble min_diversity, jint max_evolution, jdouble area_threshold, jdouble min_margin, jint edge_blur_size) {
+	Mat& image = *(cv::Mat*)imagePtr;
+	Mat& keypointMat = *(cv::Mat*)keypointMatPtr;
+	//Mat& descriptorMat = *(cv::Mat*)descriptorMatPtr;
+	vector<KeyPoint> keypoints;
+	Ptr<FeatureDetector> detector;
+	//Ptr<DescriptorExtractor> extractor;
+	detector = new MserFeatureDetector(delta, min_area, max_area, max_variation, min_diversity, max_evolution, area_threshold, min_margin, edge_blur_size);
+	detector->detect(image, keypoints);
+	//delete detector;
+	vector_KeyPoint_to_Mat(keypoints, keypointMat);
+}
+
 JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeMSCRSIFT(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr, jlong descriptorMatPtr) {
 	Mat& image = *(cv::Mat*)imagePtr;
 	Mat& keypointMat = *(cv::Mat*)keypointMatPtr;
@@ -176,7 +212,19 @@ JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_n
 	detector->detect(image, keypoints);
 	extractor = new SiftDescriptorExtractor();
 	extractor->compute(image, keypoints, descriptorMat);
-	vector_KeyPoint_to_Mat(keypoints, keypointMat);
+}
+
+JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Features_nativeMSCRSIFT(JNIEnv* env, jobject, jlong imagePtr, jlong keypointMatPtr, jlong descriptorMatPtr) {
+	Mat& image = *(cv::Mat*)imagePtr;
+	Mat& keypointMat = *(cv::Mat*)keypointMatPtr;
+	Mat& descriptorMat = *(cv::Mat*)descriptorMatPtr;
+	vector<KeyPoint> keypoints;
+	Ptr<FeatureDetector> detector;
+	Ptr<DescriptorExtractor> extractor;
+	detector = new MserFeatureDetector();
+	detector->detect(image, keypoints);
+	extractor = new SiftDescriptorExtractor();
+	extractor->compute(image, keypoints, descriptorMat);
 }
 
 JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeDrawMatchesCustom(JNIEnv * env, jobject, jlong img1Ptr, jlong kpImg1Ptr, jlong img2Ptr, jlong kpImg2Ptr, jlong matchesPtr, jlong imgTargetPtr, jdoubleArray matchColorPtr, jdoubleArray otherColorPtr, jint ptRadius, jint ptThickness, jint lineSize)
@@ -247,7 +295,167 @@ env->SetDoubleArrayRegion( output, 0, results.size(), &results[0] );
 	}
 }
 
+JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Features_nativeDrawMatchesCustom(JNIEnv * env, jobject, jlong img1Ptr, jlong kpImg1Ptr, jlong img2Ptr, jlong kpImg2Ptr, jlong matchesPtr, jlong imgTargetPtr, jdoubleArray matchColorPtr, jdoubleArray otherColorPtr, jint ptRadius, jint ptThickness, jint lineSize)
+{
+	/*
+	 * jsize size = env->GetArrayLength( arr );
+std::vector<double> input( size );
+env->GetDoubleArrayRegion( arr, 0, size, &input[0] );
+
+//  ...
+
+jdoubleArray output = env->NewDoubleArray( results.size() );
+env->SetDoubleArrayRegion( output, 0, results.size(), &results[0] );
+	 */
+	Mat img1 = *(Mat*)img1Ptr;
+	Mat img2 = *(Mat*)img2Ptr;
+	Mat keypointsMat1 = *(Mat*)kpImg1Ptr;
+	Mat keypointsMat2 = *(Mat*)kpImg2Ptr;
+	Mat matches1to2Mat = *(Mat*)matchesPtr;
+	Mat outImg = *(Mat*)imgTargetPtr;
+	vector<KeyPoint> keypoints1;
+	Mat_to_vector_KeyPoint(keypointsMat1, keypoints1);
+	vector<KeyPoint> keypoints2;
+	Mat_to_vector_KeyPoint(keypointsMat2, keypoints2);
+	vector<DMatch> matches1to2;
+	Mat_to_vector_DMatch(matches1to2Mat, matches1to2);
+	jsize msize = env->GetArrayLength( matchColorPtr ), lsize = env->GetArrayLength( otherColorPtr );
+	vector<double> mColor(msize), lColor(lsize);
+	env->GetDoubleArrayRegion( matchColorPtr, 0, msize, &mColor[0] );
+	env->GetDoubleArrayRegion( otherColorPtr, 0, lsize, &lColor[0] );
+	Scalar matchColor = Scalar(mColor[0], mColor[1], mColor[2]);
+	Scalar otherColor = Scalar(lColor[0], lColor[1], lColor[2]);
+
+	Size sz1 = img1.size();
+	Size sz2 = img2.size();
+	//Mat(max(sz1.height, sz2.height), sz1.width+sz2.width, outImg.type()).copyTo(outImg);
+	LOGI("DrawMatches - copied the re-created output image.");
+	Mat left(outImg, cv::Rect(0, 0, sz1.width, sz1.height));
+	img1.copyTo(left);
+	LOGI("DrawMatches - copied the left ROI to output image.");
+    Mat right(outImg, cv::Rect(sz1.width, 0, sz2.width, sz2.height));
+    img2.copyTo(right);
+    LOGI("DrawMatches - copied the right ROI to output image.");
+
+    //im3.adjustROI(0, 0, -sz1.width, sz2.width);
+	for(uint i = 0; i < keypoints1.size(); i++)
+	{
+		circle(outImg, keypoints1.at(i).pt, ptRadius, otherColor,ptThickness, CV_AA, 0);
+	}
+	//im3.adjustROI(0, 0, sz1.width, 0);
+	Point2f tPoint;
+	for(uint i = 0; i < keypoints2.size(); i++)
+	{
+		tPoint = keypoints2.at(i).pt;
+		tPoint.x+=float(sz1.width);
+		circle(outImg, tPoint, ptRadius, otherColor,ptThickness, CV_AA, 0);
+	}
+
+	Point2f tOP;
+	for(uint i = 0; i < matches1to2.size(); i++)
+	{
+		tOP = keypoints1.at(matches1to2.at(i).queryIdx).pt;
+		tPoint = keypoints2.at(matches1to2.at(i).trainIdx).pt;
+		tPoint.x+=float(sz1.width);
+		circle(outImg, tOP, ptRadius, matchColor, -1, CV_AA, 0);
+		circle(outImg, tPoint, ptRadius, matchColor, -1, CV_AA, 0);
+		line(outImg, tOP, tPoint, matchColor, lineSize, CV_AA, 0);
+	}
+}
+
 JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeWallisFilter(JNIEnv* env, jobject, jlong imgInMatPtr, jlong imgOutMatPtr, jint kernelSize) {
+	if((imgInMatPtr==0) || (imgOutMatPtr==0)){
+		LOGE("in- or out image are NULL.");
+		return;
+	} else {
+		LOGI("starting Wallis adaptation.");
+	}
+
+	Mat& imgIn = *(Mat*)imgInMatPtr;
+	//cv::Mat* imgIn = (cv::Mat*)imgInMatPtr;
+	//cv::Mat* imgIn = reinterpret_cast<cv::Mat*>(imgInMatPtr);
+	Mat& outImg = *(Mat*)imgOutMatPtr;
+	//cv::Mat* outImg = (cv::Mat*)imgOutMatPtr;
+	//cv::Mat* outImg = reinterpret_cast<cv::Mat*>(imgOutMatPtr);
+
+
+	float targetStDev = 50.0f; 
+	float targetMean = 256.0f; 
+	float alfa = 0.0f;
+	float limit = 10.0f;
+
+	Mat ycrcbIn = Mat::zeros(imgIn.size(), CV_8UC3);
+	Mat ycrcbOut = Mat::zeros(imgIn.size(), CV_8UC3);
+	Mat(imgIn.size().height, imgIn.size().width, CV_8UC3).copyTo(outImg);
+	cvtColor(imgIn, ycrcbIn, CV_BGR2YCrCb);
+
+	/*
+	 * Original Wallis - just on Y-channel
+	 */
+	Vec3b pix, sout;
+	long half = ((int)kernelSize - 1) / 2;
+	long w = imgIn.size().width, h = imgIn.size().height;
+	float mY, stdY;
+	long c,r;
+	long xt, yt;
+	//int cg = 1; // Wallis standard value
+	//float b = 1.5; // Wallis standard value
+	//float r1, r0; // Wallis shift and scale parameters
+	int size = (int)kernelSize*(int)kernelSize;
+	long c_start, c_end, r_start, r_end;
+	for (long x = 0; x < w; x++){
+	  for (long y = 0; y < h; y++){
+		// compute statistics
+	    mY=0;
+	    c_start = x - half; r_start = y - half;
+	    c_end = x + half; r_end = y + half;
+	    for (c = c_start; c < c_end; c++){
+	    	for (r = r_start; r < r_end; r++){
+	    	  pix = getClampedValue(ycrcbIn, c,r,w,h);
+	    	  mY += pix.val[0];
+	    	}
+	    }
+	    mY = mY / size;
+	    stdY=0;
+	    for (c = c_start; c < c_end; c++){
+	      for (r = r_start; r < r_end; r++){
+	    	  pix = getClampedValue(ycrcbIn, c,r,w,h);
+	    	  stdY += sq(pix.val[0]-mY);
+	      }
+	    }
+	    stdY = sqrt(stdY / size);
+
+	    //Calc new values
+	    xt = x; yt = y;
+	    pix = ycrcbIn.at<Vec3b>(yt,xt);
+
+	    //r1 = cg * to_dev / (cg * stdB + to_dev / cg);
+	    //r0 = b * to_av + (1 - b - r1) * mB;
+	    //sout.val[0] = pixB.val[0] * r1 + r0 ;
+	    // HIPS implementation
+	    if(int(targetMean)==256)
+	    	sout.val[0] = (int)(alfa * pix.val[0] + (1-alfa) * mY + (pix.val[0]-mY) * targetStDev / (targetStDev/limit+stdY));
+	    else
+	    	sout.val[0] = (int)(alfa * targetMean + (1-alfa) * mY + (pix.val[0]-mY) * targetStDev / (targetStDev/limit+stdY));
+
+	    sout.val[1] = pix.val[1];
+	    sout.val[2] = pix.val[2];
+	    // Write new output value
+	    ycrcbOut.at<Vec3b>(y, x).val[0] = sout.val[0];
+	    ycrcbOut.at<Vec3b>(y, x).val[1] = sout.val[1];
+	    ycrcbOut.at<Vec3b>(y, x).val[2] = sout.val[2];
+	  }
+	}
+
+	Mat bgrOut = Mat::zeros(outImg.size(), CV_8UC3);
+	cvtColor(ycrcbOut, bgrOut, CV_YCrCb2BGR);
+	bgrOut.copyTo(outImg);
+	ycrcbIn.release();
+	ycrcbOut.release();
+	bgrOut.release();
+}
+
+JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Filters_nativeWallisFilter(JNIEnv* env, jobject, jlong imgInMatPtr, jlong imgOutMatPtr, jint kernelSize) {
 	if((imgInMatPtr==0) || (imgOutMatPtr==0)){
 		LOGE("in- or out image are NULL.");
 		return;
@@ -460,7 +668,177 @@ JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_n
 	}
 }
 
+JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Filters_nativeWallisRGBFilter(JNIEnv* env, jobject, jlong imgInMatPtr, jlong imgOutMatPtr, jint kernelSize) {
+	if((imgInMatPtr==0) || (imgOutMatPtr==0)){
+		LOGE("in- or out image are NULL.");
+		return;
+	} else {
+		LOGI("starting Wallis adaptation.");
+	}
+
+	Mat& imgIn = *(Mat*)imgInMatPtr;
+	//cv::Mat* imgIn = (cv::Mat*)imgInMatPtr;
+	//cv::Mat* imgIn = reinterpret_cast<cv::Mat*>(imgInMatPtr);
+	Mat& outImg = *(Mat*)imgOutMatPtr;
+	//cv::Mat* outImg = (cv::Mat*)imgOutMatPtr;
+	//cv::Mat* outImg = reinterpret_cast<cv::Mat*>(imgOutMatPtr);
+
+
+	float targetStDev = 50.0f;
+	float targetMean = 256.0f;
+	float alfa = 0.0f;
+	float limit = 10.0f;
+
+	Mat(imgIn.size().height, imgIn.size().width, CV_8UC3).copyTo(outImg);
+
+	/*
+	 * Original Wallis - just on Y-channel
+	 */
+	Vec3b pix, sout;
+	long half = (kernelSize - 1) / 2;
+	//long x_end = imgIn.size().width - kernelSize;
+	//long y_end = imgIn.size().height - kernelSize;
+	long w = imgIn.size().width, h = imgIn.size().height;
+	float mR, mG, mB, stdR, stdG, stdB;
+	long c,r;
+	long xt, yt;
+	//int cg = 1; // Wallis standard value
+	//float b = 1.5; // Wallis standard value
+	//float r1, r0; // Wallis shift and scale parameters
+	int size = kernelSize*kernelSize;
+	long c_start, c_end, r_start, r_end;
+	//for (long x = 0; x < x_end; x++){
+	//  for (long y = 0; y < y_end; y++){
+	for (long x = 0; x < w; x++){
+	  for (long y = 0; y < h; y++){
+		// compute statistics
+	    mR=mG=mB=0;
+	    c_start = x - half; r_start = y - half;
+	    c_end = x + half; r_end = y + half;
+	    //c_end = x + (kernelSize - 1); r_end = y + kernelSize - 1;
+	    //for (c = x; c < c_end; c++){
+	    //  for (r = y; r < r_end; r++){
+	    for (c = c_start; c < c_end; c++){
+	    	for (r = r_start; r < r_end; r++){
+	    	  //imgIn.at<cv::Vec3b>(r,c).val[0];
+	    	  //pix = imgIn.at<cv::Vec3b>(r,c);
+	    	  pix = getClampedValue(imgIn, c,r,w,h);
+	    	  mR += pix.val[2];
+	    	  mG += pix.val[1];
+	    	  mB += pix.val[0];
+	    	}
+	    }
+	    mR = mR / size;
+	    mG = mG / size;
+	    mB = mB / size;
+	    stdR=stdB=stdG=0;
+	    //for (c = x; c < c_end; c++){
+	    //  for (r = y; r < r_end; r++){
+	    for (c = c_start; c < c_end; c++){
+	      for (r = r_start; r < r_end; r++){
+	    	  //pix = imgIn.at<cv::Vec3b>(r,c);
+	    	  pix = getClampedValue(imgIn, c,r,w,h);
+	    	  stdR += sq(pix.val[2]-mR);
+	    	  stdG += sq(pix.val[1]-mG);
+	    	  stdB += sq(pix.val[0]-mB);
+	      }
+	    }
+	    stdB = sqrt(stdB / size);
+	    stdG = sqrt(stdG / size);
+	    stdR = sqrt(stdR / size);
+
+	    //Calc new values
+	    //xt = x+half+1; yt = y+half+1;
+	    //xt = x+half; yt = y+half;
+	    xt = x; yt = y;
+	    pix = imgIn.at<cv::Vec3b>(yt,xt);
+
+	    //r1 = cg * to_dev / (cg * stdB + to_dev / cg);
+	    //r0 = b * to_av + (1 - b - r1) * mB;
+	    //sout.val[0] = pixB.val[0] * r1 + r0 ;
+	    // HIPS implementation
+	    if(int(targetMean)==256)
+	    	sout.val[0] = alfa * pix.val[0] + (1-alfa) * mB + (pix.val[0]-mB) * targetStDev / (targetStDev/limit+stdB);
+	    else
+	    	sout.val[0] = alfa * targetMean + (1-alfa) * mB + (pix.val[0]-mB) * targetStDev / (targetStDev/limit+stdB);
+
+
+	    //r1 = cg * to_dev / (cg * stdG + to_dev / cg);
+	    //r0 = b * to_av + (1 - b - r1) * mG;
+	    //sout.val[1] = pixG.val[0] * r1 + r0 ;
+	    // HIPS implementation
+	    if(int(targetMean)==256)
+	    	sout.val[1] = alfa * pix.val[1] + (1-alfa) * mG + (pix.val[1]-mG) * targetStDev / (targetStDev/limit+stdG);
+	    else
+	    	sout.val[1] = alfa * targetMean + (1-alfa) * mG + (pix.val[1]-mG) * targetStDev / (targetStDev/limit+stdG);
+
+	    //r1 = cg * to_dev / (cg * stdR + to_dev / cg);
+	    //r0 = b * to_av + (1 - b - r1) * mR;
+	    //sout.val[2] = pixR.val[0] * r1 + r0 ;
+	    // HIPS implementation
+	    if(int(targetMean)==256)
+	    	sout.val[2] = alfa * pix.val[2] + (1-alfa) * mR + (pix.val[2]-mR) * targetStDev / (targetStDev/limit+stdR);
+	    else
+	    	sout.val[2] = alfa * targetMean + (1-alfa) * mR + (pix.val[2]-mR) * targetStDev / (targetStDev/limit+stdR);
+
+	    // Write new output value
+	    outImg.at<Vec3b>(y, x).val[0] = sout.val[0];
+	    outImg.at<Vec3b>(y, x).val[1] = sout.val[1];
+	    outImg.at<Vec3b>(y, x).val[2] = sout.val[2];
+	  }
+	}
+}
+
 JNIEXPORT void JNICALL Java_christian_fragmentexample_AutoRegistrationFragment_nativeGammaAdaptation(JNIEnv* env, jobject, jlong imgInMatPtr, jlong imgOutMatPtr, jfloat gamma) {
+	if((imgInMatPtr==0) || (imgOutMatPtr==0)){
+		LOGE("in- or out image are NULL.");
+		return;
+	} else {
+		LOGI("starting Gamma adaptation.");
+	}
+	Mat& imgIn = *(Mat*)imgInMatPtr;
+	//cv::Mat* imgIn = reinterpret_cast<cv::Mat*>(imgInMatPtr);
+	Mat& outImg = *(Mat*)imgOutMatPtr;
+	//cv::Mat* outImg = reinterpret_cast<cv::Mat*>(imgOutMatPtr);
+
+
+	Mat ycrcbIn = cv::Mat::zeros(imgIn.size(), CV_8UC3);
+	Mat ycrcbOut = cv::Mat::zeros(imgIn.size(), CV_8UC3);
+	cvtColor(imgIn, ycrcbIn, CV_BGR2YCrCb);
+
+	cv::Vec3b pix, sout;
+	long w = imgIn.size().width, h = imgIn.size().height;
+	for (long x = 0; x < w; x++){
+	  for (long y = 0; y < h; y++){
+		// compute statistics
+		pix = getClampedValue(ycrcbIn, x,y,w,h);
+		float value = (float(pix.val[0])/255.0f);
+		value = max(0.0f, min(1.0f, pow(value, gamma)));
+	    sout.val[0] = int(value*255.0f);
+	    sout.val[1] = pix.val[1];
+	    sout.val[2] = pix.val[2];
+	    // Write new output value
+	    ycrcbOut.at<Vec3b>(y, x).val[0] = sout.val[0];
+	    ycrcbOut.at<Vec3b>(y, x).val[1] = sout.val[1];
+	    ycrcbOut.at<Vec3b>(y, x).val[2] = sout.val[2];
+	  }
+	}
+
+	Mat bgrOut = Mat::zeros(outImg.size(), CV_8UC3);
+	cvtColor(ycrcbOut, bgrOut, CV_YCrCb2BGR);
+	bgrOut.copyTo(outImg);
+	//for (long x = 0; x < w; x++){
+	//  for (long y = 0; y < h; y++){
+	//	  outImg.at<cv::Vec3b>(y,x) = bgrOut.at<cv::Vec3b>(y,x);
+	//  }
+	//}
+	ycrcbIn.release();
+	ycrcbOut.release();
+	bgrOut.release();
+	LOGI("finished Gamma adaptation.");
+}
+
+JNIEXPORT void JNICALL Java_org_opencv_auxiliary_Filters_nativeGammaAdaptation(JNIEnv* env, jobject, jlong imgInMatPtr, jlong imgOutMatPtr, jfloat gamma) {
 	if((imgInMatPtr==0) || (imgOutMatPtr==0)){
 		LOGE("in- or out image are NULL.");
 		return;

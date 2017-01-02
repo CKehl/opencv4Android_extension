@@ -31,17 +31,14 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
 # The program to use to edit the cache.
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/christian/DATA/OCV_Android_2410/opencv-2.4.10
+CMAKE_SOURCE_DIR = /home/christian/git/OpenCV4Android/opencv-2.4.10
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build
+CMAKE_BINARY_DIR = /home/christian/git/OpenCV4Android/opencv-2.4.10/build
 
 # Utility rule file for uninstall.
 
@@ -49,7 +46,7 @@ CMAKE_BINARY_DIR = /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build
 include CMakeFiles/uninstall.dir/progress.make
 
 CMakeFiles/uninstall:
-	/usr/bin/cmake -P /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/cmake_uninstall.cmake
+	/usr/bin/cmake -P /home/christian/git/OpenCV4Android/opencv-2.4.10/build/cmake_uninstall.cmake
 
 uninstall: CMakeFiles/uninstall
 uninstall: CMakeFiles/uninstall.dir/build.make
@@ -64,6 +61,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/christian/DATA/OCV_Android_2410/opencv-2.4.10 /media/christian/DATA/OCV_Android_2410/opencv-2.4.10 /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/christian/git/OpenCV4Android/opencv-2.4.10/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/christian/git/OpenCV4Android/opencv-2.4.10 /home/christian/git/OpenCV4Android/opencv-2.4.10 /home/christian/git/OpenCV4Android/opencv-2.4.10/build /home/christian/git/OpenCV4Android/opencv-2.4.10/build /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

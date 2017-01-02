@@ -1,8 +1,8 @@
-# Install script for directory: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10
+# Install script for directory: /home/christian/git/OpenCV4Android/opencv-2.4.10
 
 # Set the install prefix
 IF(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  SET(CMAKE_INSTALL_PREFIX "/var/scratch/ocv2410")
+  SET(CMAKE_INSTALL_PREFIX "/home/christian/android_install")
 ENDIF(NOT DEFINED CMAKE_INSTALL_PREFIX)
 STRING(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -33,26 +33,26 @@ IF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 ENDIF(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/opencv2/opencv_modules.hpp")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/opencv2" TYPE FILE FILES "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/opencv2/opencv_modules.hpp")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/unix-install/opencv.pc")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/unix-install/opencv.pc")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenCV" TYPE FILE FILES "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/unix-install/OpenCVConfig.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenCV" TYPE FILE FILES "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/unix-install/OpenCVConfig.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenCV" TYPE FILE FILES "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/unix-install/OpenCVConfig-version.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenCV" TYPE FILE FILES "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/unix-install/OpenCVConfig-version.cmake")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
 
 IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
   IF(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/OpenCV/OpenCVModules.cmake")
     FILE(DIFFERENT EXPORT_FILE_CHANGED FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/OpenCV/OpenCVModules.cmake"
-         "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/Export/share/OpenCV/OpenCVModules.cmake")
+         "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/Export/share/OpenCV/OpenCVModules.cmake")
     IF(EXPORT_FILE_CHANGED)
       FILE(GLOB OLD_CONFIG_FILES "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/share/OpenCV/OpenCVModules-*.cmake")
       IF(OLD_CONFIG_FILES)
@@ -61,20 +61,20 @@ IF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
       ENDIF(OLD_CONFIG_FILES)
     ENDIF(EXPORT_FILE_CHANGED)
   ENDIF()
-  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenCV" TYPE FILE FILES "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/Export/share/OpenCV/OpenCVModules.cmake")
+  FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenCV" TYPE FILE FILES "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/Export/share/OpenCV/OpenCVModules.cmake")
   IF("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenCV" TYPE FILE FILES "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/Export/share/OpenCV/OpenCVModules-release.cmake")
+    FILE(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/OpenCV" TYPE FILE FILES "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/Export/share/OpenCV/OpenCVModules-release.cmake")
   ENDIF("${CMAKE_INSTALL_CONFIG_NAME}" MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
 ENDIF(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "dev")
 
 IF(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  INCLUDE("/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/include/cmake_install.cmake")
-  INCLUDE("/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/modules/cmake_install.cmake")
-  INCLUDE("/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/doc/cmake_install.cmake")
-  INCLUDE("/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/data/cmake_install.cmake")
-  INCLUDE("/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/apps/cmake_install.cmake")
-  INCLUDE("/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/samples/cmake_install.cmake")
+  INCLUDE("/home/christian/git/OpenCV4Android/opencv-2.4.10/build/include/cmake_install.cmake")
+  INCLUDE("/home/christian/git/OpenCV4Android/opencv-2.4.10/build/modules/cmake_install.cmake")
+  INCLUDE("/home/christian/git/OpenCV4Android/opencv-2.4.10/build/doc/cmake_install.cmake")
+  INCLUDE("/home/christian/git/OpenCV4Android/opencv-2.4.10/build/data/cmake_install.cmake")
+  INCLUDE("/home/christian/git/OpenCV4Android/opencv-2.4.10/build/apps/cmake_install.cmake")
+  INCLUDE("/home/christian/git/OpenCV4Android/opencv-2.4.10/build/samples/cmake_install.cmake")
 
 ENDIF(NOT CMAKE_INSTALL_LOCAL_ONLY)
 
@@ -84,7 +84,7 @@ ELSE(CMAKE_INSTALL_COMPONENT)
   SET(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
 ENDIF(CMAKE_INSTALL_COMPONENT)
 
-FILE(WRITE "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/${CMAKE_INSTALL_MANIFEST}" "")
+FILE(WRITE "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/${CMAKE_INSTALL_MANIFEST}" "")
 FOREACH(file ${CMAKE_INSTALL_MANIFEST_FILES})
-  FILE(APPEND "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
+  FILE(APPEND "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/${CMAKE_INSTALL_MANIFEST}" "${file}\n")
 ENDFOREACH(file)

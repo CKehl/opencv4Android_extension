@@ -2,11 +2,11 @@
 # File that provides "make uninstall" target
 #  We use the file 'install_manifest.txt'
 # -----------------------------------------------
-IF(NOT EXISTS "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/install_manifest.txt")
-  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/install_manifest.txt\"")
-ENDIF(NOT EXISTS "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/install_manifest.txt")
+IF(NOT EXISTS "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/install_manifest.txt")
+  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/home/christian/git/OpenCV4Android/opencv-2.4.10/build/install_manifest.txt\"")
+ENDIF(NOT EXISTS "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/install_manifest.txt")
 
-FILE(READ "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/install_manifest.txt" files)
+FILE(READ "/home/christian/git/OpenCV4Android/opencv-2.4.10/build/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 FOREACH(file ${files})
   MESSAGE(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

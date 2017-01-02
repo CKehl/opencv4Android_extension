@@ -35,17 +35,14 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
 # The program to use to edit the cache.
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/christian/DATA/OCV_Android_2410/opencv-2.4.10
+CMAKE_SOURCE_DIR = /home/christian/git/OpenCV4Android/opencv-2.4.10
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build
+CMAKE_BINARY_DIR = /home/christian/git/OpenCV4Android/opencv-2.4.10/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -94,7 +91,7 @@ install/strip/fast: install/strip
 
 # Special rule for the target list_install_components
 list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"docs\" \"java\" \"libs\" \"python\" \"samples\""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"dev\" \"java\" \"libs\""
 .PHONY : list_install_components
 
 # Special rule for the target list_install_components
@@ -114,7 +111,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -133,9 +130,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -1502,19 +1499,6 @@ pch_Generate_opencv_test_gpu/fast:
 .PHONY : pch_Generate_opencv_test_gpu/fast
 
 #=============================================================================
-# Target rules for targets named gpu_perf4au
-
-# Build rule for target.
-gpu_perf4au: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 gpu_perf4au
-.PHONY : gpu_perf4au
-
-# fast build rule for target.
-gpu_perf4au/fast:
-	$(MAKE) -f modules/gpu/perf4au/CMakeFiles/gpu_perf4au.dir/build.make modules/gpu/perf4au/CMakeFiles/gpu_perf4au.dir/build
-.PHONY : gpu_perf4au/fast
-
-#=============================================================================
 # Target rules for targets named opencv_ocl
 
 # Build rule for target.
@@ -1866,19 +1850,6 @@ opencv_test_java_properties/fast:
 .PHONY : opencv_test_java_properties/fast
 
 #=============================================================================
-# Target rules for targets named opencv_python
-
-# Build rule for target.
-opencv_python: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opencv_python
-.PHONY : opencv_python
-
-# fast build rule for target.
-opencv_python/fast:
-	$(MAKE) -f modules/python/CMakeFiles/opencv_python.dir/build.make modules/python/CMakeFiles/opencv_python.dir/build
-.PHONY : opencv_python/fast
-
-#=============================================================================
 # Target rules for targets named opencv_perf_stitching
 
 # Build rule for target.
@@ -2189,32 +2160,6 @@ pch_Generate_opencv_videostab: cmake_check_build_system
 pch_Generate_opencv_videostab/fast:
 	$(MAKE) -f modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/build.make modules/videostab/CMakeFiles/pch_Generate_opencv_videostab.dir/build
 .PHONY : pch_Generate_opencv_videostab/fast
-
-#=============================================================================
-# Target rules for targets named docs
-
-# Build rule for target.
-docs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 docs
-.PHONY : docs
-
-# fast build rule for target.
-docs/fast:
-	$(MAKE) -f doc/CMakeFiles/docs.dir/build.make doc/CMakeFiles/docs.dir/build
-.PHONY : docs/fast
-
-#=============================================================================
-# Target rules for targets named html_docs
-
-# Build rule for target.
-html_docs: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 html_docs
-.PHONY : html_docs
-
-# fast build rule for target.
-html_docs/fast:
-	$(MAKE) -f doc/CMakeFiles/html_docs.dir/build.make doc/CMakeFiles/html_docs.dir/build
-.PHONY : html_docs/fast
 
 #=============================================================================
 # Target rules for targets named opencv_createsamples
@@ -4920,7 +4865,6 @@ help:
 	@echo "... pch_Generate_opencv_gpu"
 	@echo "... pch_Generate_opencv_perf_gpu"
 	@echo "... pch_Generate_opencv_test_gpu"
-	@echo "... gpu_perf4au"
 	@echo "... opencv_ocl"
 	@echo "... opencv_ocl_pch_dephelp"
 	@echo "... opencv_perf_ocl"
@@ -4948,7 +4892,6 @@ help:
 	@echo "... opencv_java"
 	@echo "... opencv_test_java"
 	@echo "... opencv_test_java_properties"
-	@echo "... opencv_python"
 	@echo "... opencv_perf_stitching"
 	@echo "... opencv_perf_stitching_pch_dephelp"
 	@echo "... opencv_stitching"
@@ -4973,8 +4916,6 @@ help:
 	@echo "... opencv_videostab"
 	@echo "... opencv_videostab_pch_dephelp"
 	@echo "... pch_Generate_opencv_videostab"
-	@echo "... docs"
-	@echo "... html_docs"
 	@echo "... opencv_createsamples"
 	@echo "... opencv_haartraining"
 	@echo "... opencv_haartraining_engine"

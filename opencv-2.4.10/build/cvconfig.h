@@ -2,16 +2,16 @@
 #define BUILD_SHARED_LIBS
 
 /* Compile for 'real' NVIDIA GPU architectures */
-#define CUDA_ARCH_BIN " 11 12 13 20 21 30 35"
+#define CUDA_ARCH_BIN ""
 
 /* Create PTX or BIN for 1.0 compute capability */
 /* #undef CUDA_ARCH_BIN_OR_PTX_10 */
 
 /* NVIDIA GPU features are used */
-#define CUDA_ARCH_FEATURES " 11 12 13 20 20 30 35 30"
+#define CUDA_ARCH_FEATURES ""
 
 /* Compile for 'virtual' NVIDIA PTX architectures */
-#define CUDA_ARCH_PTX " 30"
+#define CUDA_ARCH_PTX ""
 
 /* AVFoundation video libraries */
 /* #undef HAVE_AVFOUNDATION */
@@ -41,16 +41,16 @@
 /* #undef HAVE_CUBLAS */
 
 /* NVidia Cuda Runtime API*/
-#define HAVE_CUDA
+/* #undef HAVE_CUDA */
 
 /* NVidia Cuda Fast Fourier Transform (FFT) API*/
-#define HAVE_CUFFT
+/* #undef HAVE_CUFFT */
 
 /* IEEE1394 capturing support */
 /* #undef HAVE_DC1394 */
 
 /* IEEE1394 capturing support - libdc1394 v2.x */
-#define HAVE_DC1394_2
+/* #undef HAVE_DC1394_2 */
 
 /* DirectShow Video Capture library */
 /* #undef HAVE_DSHOW */
@@ -68,7 +68,7 @@
 #define HAVE_GENTOO_FFMPEG
 
 /* GStreamer multimedia framework */
-#define HAVE_GSTREAMER
+/* #undef HAVE_GSTREAMER */
 
 /* GTK+ 2.0 Thread support */
 #define HAVE_GTHREAD

@@ -52,11 +52,11 @@ endif()
 # TODO All things below should be reviewed. What is about of moving this code into related modules (special vars/hooks/files)
 
 # Version Compute Capability from which OpenCV has been compiled is remembered
-set(OpenCV_COMPUTE_CAPABILITIES -gencode;arch=compute_11,code=sm_11;-gencode;arch=compute_12,code=sm_12;-gencode;arch=compute_13,code=sm_13;-gencode;arch=compute_20,code=sm_20;-gencode;arch=compute_20,code=sm_21;-gencode;arch=compute_30,code=sm_30;-gencode;arch=compute_35,code=sm_35;-gencode;arch=compute_30,code=compute_30)
+set(OpenCV_COMPUTE_CAPABILITIES "")
 
-set(OpenCV_CUDA_VERSION 6.0)
+set(OpenCV_CUDA_VERSION )
 set(OpenCV_USE_CUBLAS   )
-set(OpenCV_USE_CUFFT    1)
+set(OpenCV_USE_CUFFT    )
 set(OpenCV_USE_NVCUVID  )
 
 # Android API level from which OpenCV has been compiled is remembered
@@ -97,7 +97,7 @@ set(OpenCV_HAVE_ANDROID_CAMERA OFF)
 # ======================================================
 
 # Provide the include directories to the caller
-set(OpenCV_INCLUDE_DIRS "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build" "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/include" "/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/include/opencv")
+set(OpenCV_INCLUDE_DIRS "/home/christian/git/OpenCV4Android/opencv-2.4.10/build" "/home/christian/git/OpenCV4Android/opencv-2.4.10/include" "/home/christian/git/OpenCV4Android/opencv-2.4.10/include/opencv")
 include_directories(${OpenCV_INCLUDE_DIRS})
 
 # ======================================================
@@ -129,7 +129,7 @@ SET(OpenCV_LIB_COMPONENTS opencv_videostab;opencv_video;opencv_ts;opencv_superre
 # ==============================================================
 #  Extra include directories, needed by OpenCV 2 new structure
 # ==============================================================
-SET(OpenCV2_INCLUDE_DIRS /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/core/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/flann/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/imgproc/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/highgui/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/features2d/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/calib3d/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/ml/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/video/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/legacy/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/objdetect/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/photo/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/gpu/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/ocl/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/nonfree/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/contrib/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/stitching/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/superres/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/ts/include;/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/modules/videostab/include)
+SET(OpenCV2_INCLUDE_DIRS /home/christian/git/OpenCV4Android/opencv-2.4.10/modules/core/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/flann/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/imgproc/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/highgui/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/features2d/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/calib3d/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/ml/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/video/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/legacy/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/objdetect/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/photo/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/gpu/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/ocl/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/nonfree/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/contrib/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/stitching/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/superres/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/ts/include;/home/christian/git/OpenCV4Android/opencv-2.4.10/modules/videostab/include)
 if(OpenCV2_INCLUDE_DIRS)
   include_directories(${OpenCV2_INCLUDE_DIRS})
   list(APPEND OpenCV_INCLUDE_DIRS ${OpenCV2_INCLUDE_DIRS})

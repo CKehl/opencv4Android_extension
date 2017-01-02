@@ -1,16 +1,16 @@
 Determining if the system is big endian passed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec924296688/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec924296688.dir/build.make CMakeFiles/cmTryCompileExec924296688.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec924296688.dir/TestEndianess.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec924296688.dir/TestEndianess.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/TestEndianess.c
-Linking C executable cmTryCompileExec924296688
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec924296688.dir/link.txt --verbose=1
-/usr/bin/cc     -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec924296688.dir/TestEndianess.c.o  -o cmTryCompileExec924296688 -rdynamic 
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/TestEndianess.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/TestEndianess.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTryCompileExec
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec.dir/link.txt --verbose=1
+/usr/bin/gcc      -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG    CMakeFiles/cmTryCompileExec.dir/TestEndianess.c.o  -o cmTryCompileExec -rdynamic 
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
 
 TestEndianess.c:
 /* A 16 bit integer is required. */
@@ -39,308 +39,290 @@ int main(int argc, char *argv[])
 
 
 Determining if the include file linux/videodev.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2727144467/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2727144467.dir/build.make CMakeFiles/cmTryCompileExec2727144467.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2727144467.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2727144467.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
- #include <linux/videodev.h>
-                            ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatale fout: linux/videodev.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec2727144467.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec2727144467.dir/CheckIncludeFile.c.o' failed
-make[1]: *** [CMakeFiles/cmTryCompileExec2727144467.dir/CheckIncludeFile.c.o] Error 1
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-Makefile:117: recipe for target 'cmTryCompileExec2727144467/fast' failed
-make: *** [cmTryCompileExec2727144467/fast] Error 2
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file sys/videoio.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1235538586/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1235538586.dir/build.make CMakeFiles/cmTryCompileExec1235538586.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1235538586.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1235538586.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
- #include <sys/videoio.h>
-                         ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatale fout: sys/videoio.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec1235538586.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec1235538586.dir/CheckIncludeFile.c.o' failed
-make[1]: *** [CMakeFiles/cmTryCompileExec1235538586.dir/CheckIncludeFile.c.o] Error 1
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-Makefile:117: recipe for target 'cmTryCompileExec1235538586/fast' failed
-make: *** [cmTryCompileExec1235538586/fast] Error 2
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file ffmpeg/avformat.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3214695351/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3214695351.dir/build.make CMakeFiles/cmTryCompileExec3214695351.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3214695351.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3214695351.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
- #include <ffmpeg/avformat.h>
-                             ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatale fout: ffmpeg/avformat.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec3214695351.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec3214695351.dir/CheckIncludeFile.c.o' failed
-make[1]: *** [CMakeFiles/cmTryCompileExec3214695351.dir/CheckIncludeFile.c.o] Error 1
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-Makefile:117: recipe for target 'cmTryCompileExec3214695351/fast' failed
-make: *** [cmTryCompileExec3214695351/fast] Error 2
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file linux/videodev.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec572916901/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec572916901.dir/build.make CMakeFiles/cmTryCompileExec572916901.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec572916901.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec572916901.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
- #include <linux/videodev.h>
-                            ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatale fout: linux/videodev.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec572916901.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec572916901.dir/CheckIncludeFile.c.o' failed
-make[1]: *** [CMakeFiles/cmTryCompileExec572916901.dir/CheckIncludeFile.c.o] Error 1
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-Makefile:117: recipe for target 'cmTryCompileExec572916901/fast' failed
-make: *** [cmTryCompileExec572916901/fast] Error 2
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file sys/videoio.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec2259374761/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec2259374761.dir/build.make CMakeFiles/cmTryCompileExec2259374761.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec2259374761.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2259374761.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
- #include <sys/videoio.h>
-                         ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatale fout: sys/videoio.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec2259374761.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec2259374761.dir/CheckIncludeFile.c.o' failed
-make[1]: *** [CMakeFiles/cmTryCompileExec2259374761.dir/CheckIncludeFile.c.o] Error 1
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-Makefile:117: recipe for target 'cmTryCompileExec2259374761/fast' failed
-make: *** [cmTryCompileExec2259374761/fast] Error 2
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file ffmpeg/avformat.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec1574270186/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec1574270186.dir/build.make CMakeFiles/cmTryCompileExec1574270186.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec1574270186.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1574270186.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
- #include <ffmpeg/avformat.h>
-                             ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatale fout: ffmpeg/avformat.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec1574270186.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec1574270186.dir/CheckIncludeFile.c.o' failed
-make[1]: *** [CMakeFiles/cmTryCompileExec1574270186.dir/CheckIncludeFile.c.o] Error 1
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-Makefile:117: recipe for target 'cmTryCompileExec1574270186/fast' failed
-make: *** [cmTryCompileExec1574270186/fast] Error 2
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file linux/videodev.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3439851681/fast"
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3439851681.dir/build.make CMakeFiles/cmTryCompileExec3439851681.dir/build
-make[2]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3439851681.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3439851681.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
- #include <linux/videodev.h>
-                            ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatale fout: linux/videodev.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec3439851681.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec3439851681.dir/CheckIncludeFile.c.o' failed
-make[2]: *** [CMakeFiles/cmTryCompileExec3439851681.dir/CheckIncludeFile.c.o] Error 1
-make[2]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-Makefile:117: recipe for target 'cmTryCompileExec3439851681/fast' failed
-make[1]: *** [cmTryCompileExec3439851681/fast] Error 2
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file sys/videoio.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec666493322/fast"
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec666493322.dir/build.make CMakeFiles/cmTryCompileExec666493322.dir/build
-make[2]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec666493322.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec666493322.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
- #include <sys/videoio.h>
-                         ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatale fout: sys/videoio.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec666493322.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec666493322.dir/CheckIncludeFile.c.o' failed
-make[2]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-make[2]: *** [CMakeFiles/cmTryCompileExec666493322.dir/CheckIncludeFile.c.o] Error 1
-Makefile:117: recipe for target 'cmTryCompileExec666493322/fast' failed
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-make[1]: *** [cmTryCompileExec666493322/fast] Error 2
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file ffmpeg/avformat.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3836273825/fast"
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3836273825.dir/build.make CMakeFiles/cmTryCompileExec3836273825.dir/build
-make[2]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3836273825.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3836273825.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
- #include <ffmpeg/avformat.h>
-                             ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatale fout: ffmpeg/avformat.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec3836273825.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec3836273825.dir/CheckIncludeFile.c.o' failed
-make[2]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-make[2]: *** [CMakeFiles/cmTryCompileExec3836273825.dir/CheckIncludeFile.c.o] Error 1
-Makefile:117: recipe for target 'cmTryCompileExec3836273825/fast' failed
-make[1]: *** [cmTryCompileExec3836273825/fast] Error 2
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file linux/videodev.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3585657433/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3585657433.dir/build.make CMakeFiles/cmTryCompileExec3585657433.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3585657433.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3585657433.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
- #include <linux/videodev.h>
-                            ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatale fout: linux/videodev.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec3585657433.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec3585657433.dir/CheckIncludeFile.c.o' failed
-make[1]: *** [CMakeFiles/cmTryCompileExec3585657433.dir/CheckIncludeFile.c.o] Error 1
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-Makefile:117: recipe for target 'cmTryCompileExec3585657433/fast' failed
-make: *** [cmTryCompileExec3585657433/fast] Error 2
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file sys/videoio.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec3696514707/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec3696514707.dir/build.make CMakeFiles/cmTryCompileExec3696514707.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec3696514707.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3696514707.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
- #include <sys/videoio.h>
-                         ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatale fout: sys/videoio.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec3696514707.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec3696514707.dir/CheckIncludeFile.c.o' failed
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-make[1]: *** [CMakeFiles/cmTryCompileExec3696514707.dir/CheckIncludeFile.c.o] Error 1
-Makefile:117: recipe for target 'cmTryCompileExec3696514707/fast' failed
-make: *** [cmTryCompileExec3696514707/fast] Error 2
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file ffmpeg/avformat.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec670807896/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec670807896.dir/build.make CMakeFiles/cmTryCompileExec670807896.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec670807896.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec670807896.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
- #include <ffmpeg/avformat.h>
-                             ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatale fout: ffmpeg/avformat.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec670807896.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec670807896.dir/CheckIncludeFile.c.o' failed
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-make[1]: *** [CMakeFiles/cmTryCompileExec670807896.dir/CheckIncludeFile.c.o] Error 1
-Makefile:117: recipe for target 'cmTryCompileExec670807896/fast' failed
-make: *** [cmTryCompileExec670807896/fast] Error 2
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file linux/videodev.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec4177868272/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec4177868272.dir/build.make CMakeFiles/cmTryCompileExec4177868272.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec4177868272.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec4177868272.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
- #include <linux/videodev.h>
-                            ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatale fout: linux/videodev.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec4177868272.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec4177868272.dir/CheckIncludeFile.c.o' failed
-make[1]: *** [CMakeFiles/cmTryCompileExec4177868272.dir/CheckIncludeFile.c.o] Error 1
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-Makefile:117: recipe for target 'cmTryCompileExec4177868272/fast' failed
-make: *** [cmTryCompileExec4177868272/fast] Error 2
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file sys/videoio.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec261052013/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec261052013.dir/build.make CMakeFiles/cmTryCompileExec261052013.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec261052013.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec261052013.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
- #include <sys/videoio.h>
-                         ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatale fout: sys/videoio.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec261052013.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec261052013.dir/CheckIncludeFile.c.o' failed
-make[1]: *** [CMakeFiles/cmTryCompileExec261052013.dir/CheckIncludeFile.c.o] Error 1
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-Makefile:117: recipe for target 'cmTryCompileExec261052013/fast' failed
-make: *** [cmTryCompileExec261052013/fast] Error 2
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
 
 
 Determining if the include file ffmpeg/avformat.h exists failed with the following output:
-Change Dir: /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
 
-Run Build Command:/usr/bin/make "cmTryCompileExec483497003/fast"
-/usr/bin/make -f CMakeFiles/cmTryCompileExec483497003.dir/build.make CMakeFiles/cmTryCompileExec483497003.dir/build
-make[1]: Entering directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-/usr/bin/cmake -E cmake_progress_report /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
-Building C object CMakeFiles/cmTryCompileExec483497003.dir/CheckIncludeFile.c.o
-/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec483497003.dir/CheckIncludeFile.c.o   -c /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
-/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
- #include <ffmpeg/avformat.h>
-                             ^
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatale fout: ffmpeg/avformat.h: Bestand of map bestaat niet
 compilation terminated.
-CMakeFiles/cmTryCompileExec483497003.dir/build.make:60: recipe for target 'CMakeFiles/cmTryCompileExec483497003.dir/CheckIncludeFile.c.o' failed
-make[1]: *** [CMakeFiles/cmTryCompileExec483497003.dir/CheckIncludeFile.c.o] Error 1
-make[1]: Leaving directory '/media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/CMakeTmp'
-Makefile:117: recipe for target 'cmTryCompileExec483497003/fast' failed
-make: *** [cmTryCompileExec483497003/fast] Error 2
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make: *** [cmTryCompileExec/fast] Fout 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatale fout: linux/videodev.h: Bestand of map bestaat niet
+compilation terminated.
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatale fout: sys/videoio.h: Bestand of map bestaat niet
+compilation terminated.
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp
+
+Run Build Command:/usr/bin/make "cmTryCompileExec/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec.dir/build.make CMakeFiles/cmTryCompileExec.dir/build
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt binnengegaan
+/usr/bin/cmake -E cmake_progress_report /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o
+/usr/bin/gcc   -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections   -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o   -c /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatale fout: ffmpeg/avformat.h: Bestand of map bestaat niet
+compilation terminated.
+make[1]: Map '/home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/CMakeTmp' wordt verlaten
+make[1]: *** [CMakeFiles/cmTryCompileExec.dir/CheckIncludeFile.c.o] Fout 1
+make: *** [cmTryCompileExec/fast] Fout 2
 
 

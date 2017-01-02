@@ -31,17 +31,14 @@ CMAKE_COMMAND = /usr/bin/cmake
 # The command to remove a file.
 RM = /usr/bin/cmake -E remove -f
 
-# Escaping for special characters.
-EQUALS = =
-
 # The program to use to edit the cache.
 CMAKE_EDIT_COMMAND = /usr/bin/cmake-gui
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /media/christian/DATA/OCV_Android_2410/opencv-2.4.10
+CMAKE_SOURCE_DIR = /home/christian/git/OpenCV4Android/opencv-2.4.10
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build
+CMAKE_BINARY_DIR = /home/christian/git/OpenCV4Android/opencv-2.4.10/build
 
 # Utility rule file for opencv_modules.
 
@@ -63,6 +60,6 @@ CMakeFiles/opencv_modules.dir/clean:
 .PHONY : CMakeFiles/opencv_modules.dir/clean
 
 CMakeFiles/opencv_modules.dir/depend:
-	cd /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /media/christian/DATA/OCV_Android_2410/opencv-2.4.10 /media/christian/DATA/OCV_Android_2410/opencv-2.4.10 /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build /media/christian/DATA/OCV_Android_2410/opencv-2.4.10/build/CMakeFiles/opencv_modules.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/christian/git/OpenCV4Android/opencv-2.4.10/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/christian/git/OpenCV4Android/opencv-2.4.10 /home/christian/git/OpenCV4Android/opencv-2.4.10 /home/christian/git/OpenCV4Android/opencv-2.4.10/build /home/christian/git/OpenCV4Android/opencv-2.4.10/build /home/christian/git/OpenCV4Android/opencv-2.4.10/build/CMakeFiles/opencv_modules.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/opencv_modules.dir/depend
 
