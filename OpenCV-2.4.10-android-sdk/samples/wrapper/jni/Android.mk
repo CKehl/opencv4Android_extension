@@ -1,9 +1,9 @@
 LOCAL_PATH  := $(call my-dir)
 
-#OPENCV_PATH := /media/christian/DATA/OCV_Android_2410/OpenCV-2.4.10-android-sdk/sdk/native/jni
-#NONFREE_LIBS_DIR :=/media/christian/DATA/git/OpenCV4Android/OpenCV-2.4.10-android-sdk/samples/libnonfree/libs/$(TARGET_ARCH_ABI)
-OPENCV_PATH := $(HOME)/git/OpenCV4Android/OpenCV-2.4.10-android-sdk/sdk/native/jni
-NONFREE_LIBS_DIR := $(HOME)/git/OpenCV4Android/OpenCV-2.4.10-android-sdk/samples/libnonfree/libs/$(TARGET_ARCH_ABI)
+OPENCV_PATH := /media/christian/DATA/OCV_Android_2410/OpenCV-2.4.10-android-sdk/sdk/native/jni
+NONFREE_LIBS_DIR :=/media/christian/DATA/git/OpenCV4Android/OpenCV-2.4.10-android-sdk/samples/libnonfree/libs/$(TARGET_ARCH_ABI)
+#OPENCV_PATH := $(HOME)/git/OpenCV4Android/OpenCV-2.4.10-android-sdk/sdk/native/jni
+#NONFREE_LIBS_DIR := $(HOME)/git/OpenCV4Android/OpenCV-2.4.10-android-sdk/samples/libnonfree/libs/$(TARGET_ARCH_ABI)
 
 define add_nonfree_module
     include $(CLEAR_VARS)
